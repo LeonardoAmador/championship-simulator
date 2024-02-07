@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
+import java.awt.event.KeyEvent;
+import java.awt.event.InputEvent;
 
 public class frmMain {
 
@@ -49,18 +52,22 @@ public class frmMain {
 		menuBar.add(mnuRegisters);
 		
 		JMenuItem mnuTeams = new JMenuItem("Teams");
+		mnuTeams.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_DOWN_MASK));
 		mnuRegisters.add(mnuTeams);
 		
 		JMenuItem mnuPlayers = new JMenuItem("Players");
+		mnuPlayers.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_DOWN_MASK));
 		mnuRegisters.add(mnuPlayers);
 		
-		JMenuItem mnuChampionship = new JMenuItem("Championship");
-		mnuRegisters.add(mnuChampionship);
+		JMenuItem mnuChampionships = new JMenuItem("Championships");
+		mnuChampionships.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
+		mnuRegisters.add(mnuChampionships);
 		
 		JMenu mnuMatches = new JMenu("Matches");
 		menuBar.add(mnuMatches);
 		
 		JMenuItem mnuGames = new JMenuItem("Games");
+		mnuGames.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G, InputEvent.CTRL_DOWN_MASK));
 		mnuMatches.add(mnuGames);
 	}
 
